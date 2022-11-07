@@ -3,8 +3,8 @@ package design.pattern.FactoryMethod;
 public interface Computer {
     String  getComputerName();
 
-    public String setname();
+     String setname();
 
-    public String specification();
+     String specification();
 
 }

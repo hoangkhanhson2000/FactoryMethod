@@ -4,7 +4,6 @@ import design.pattern.FactoryMethod.constants.ComputerTypeConstants;
 import design.pattern.FactoryMethod.product.Laptop;
 import design.pattern.FactoryMethod.product.Monitor;
 import design.pattern.FactoryMethod.product.Pc;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -30,20 +29,13 @@ public class ComputerFactory {
 
 
 
-    public static final Computer getComputer(ComputerType computerType) {
-        switch (computerType) {
-
-            case laptop:
-                return new Laptop();
-
-            case pc:
-                return new Pc();
-            case monitor:
-                return new Monitor();
-
-            default:
-                throw new IllegalArgumentException("This computer type is unsupported");
-        }
+    public static Computer getComputer(ComputerType computerType) {
+        return switch (computerType) {
+            case laptop -> new Laptop();
+            case pc -> new Pc();
+            case monitor -> new Monitor();
+            default -> throw new IllegalArgumentException("This computer type is unsupported");
+        };
     }
 
 
