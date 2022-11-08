@@ -19,6 +19,7 @@ public class ComputerFactory {
     private final Pc pc;
     private final Laptop laptop;
     private static final Map<String, Computer> handler = new HashMap<>();
+
     private ComputerFactory(Monitor monitor, Pc pc, Laptop laptop) {
 
 
@@ -26,7 +27,6 @@ public class ComputerFactory {
         this.laptop = laptop;
         this.monitor = monitor;
     }
-
 
 
     public static Computer getComputer(ComputerType computerType) {
@@ -37,14 +37,6 @@ public class ComputerFactory {
             default -> throw new IllegalArgumentException("This computer type is unsupported");
         };
     }
-
-
-
-
-
-
-
-
 
 
     @PostConstruct
@@ -59,8 +51,6 @@ public class ComputerFactory {
     public static Computer createInstance(String computer) {
         return Optional.ofNullable(handler.get(computer)).orElseThrow(() -> new IllegalArgumentException("Invalid computer"));
     }
-
-
 
 
 }

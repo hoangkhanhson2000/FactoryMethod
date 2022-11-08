@@ -1,15 +1,13 @@
 package design.pattern.FactoryMethod.product;
 
 import design.pattern.FactoryMethod.Computer;
+
 import org.springframework.stereotype.Component;
 
 @Component
 public class Laptop implements Computer {
 
-	@Override
-	public String getComputerName() {
-		return "Laptop";
-	}
+
 	@Override
 	public String setname() {
 		return "Lenovo Legion Y540";

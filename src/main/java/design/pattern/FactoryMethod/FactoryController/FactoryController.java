@@ -13,7 +13,7 @@ public class FactoryController {
 	public String getComputerTypeInfo(@PathVariable("computer-type") String computer) throws Exception {
 
 		Computer computerFactory = ComputerFactory.createInstance(computer);
-		return computerFactory.getComputerName()+": "+computerFactory.specification()+" .Name:"+computerFactory.setname();
+		return computerFactory.specification()+" .Name:"+computerFactory.setname();
 	}
 
 }

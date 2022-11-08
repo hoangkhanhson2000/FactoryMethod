@@ -6,10 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Pc implements Computer {
-	@Override
-	public String getComputerName() {
-		return "Personal Computer";
-	}
+
 	@Override
 	public String setname() {
 		return "Son's PC";

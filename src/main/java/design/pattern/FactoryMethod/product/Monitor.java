@@ -6,10 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Monitor implements Computer {
-	@Override
-	public String getComputerName() {
-		return "Monitor";
-	}
+
 
 	@Override
 	public String setname() {

@@ -22,7 +22,7 @@ public class FactoryMethodApplication {
 			System.out.println("Error!");
 		}
 		Computer computer = ComputerFactory.getComputer(ComputerType.valueOf(type));
-		System.out.println(computer.getComputerName()+": "+computer.specification()+"/ "+computer.setname());
+		System.out.println(computer.specification()+"/ "+computer.setname());
 	}
 
 }
